@@ -1,8 +1,4 @@
 Header header
 
-float32 throttle_position # Computer and/or User
-float32 throttle_position_user # User
 bool throttle_overrule # Whether the user is requesting more throttle than computer
-
-float32 brake_position # User only
 bool brake_overrule # Whether the user is requesting more braking than computer
