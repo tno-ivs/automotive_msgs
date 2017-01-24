@@ -8,6 +8,10 @@ add_message_files(
     FILES
     LineSegment.msg
     Lines.msg
+    SteeringWheel.msg
+    Pedals.msg
+    Gear.msg
+    WheelSpeed.msg
 )
 
 generate_messages(DEPENDENCIES std_msgs geometry_msgs)
