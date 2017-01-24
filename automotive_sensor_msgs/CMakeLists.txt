@@ -11,7 +11,7 @@ add_message_files(
     SteeringWheel.msg
     Pedals.msg
     Gear.msg
-    WheelSpeed.msg
+    WheelSpeeds.msg
 )
 
 generate_messages(DEPENDENCIES std_msgs geometry_msgs)

@@ -1,4 +1,4 @@
-float32 angle
-float32 rate
-float32 motor_torque
-float32 torsion_bar_torque
+Header header
+
+float32 position
+float32 velocity
