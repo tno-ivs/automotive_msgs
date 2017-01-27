@@ -12,7 +12,6 @@ add_message_files(
     Pedals.msg
     Gear.msg
     WheelSpeeds.msg
-    AccelControlState.msg
 )
 
 generate_messages(DEPENDENCIES std_msgs geometry_msgs)
