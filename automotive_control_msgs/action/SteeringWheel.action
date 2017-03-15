@@ -7,4 +7,5 @@ float32 setpoint
 ---
 Header header
 
+float32 position
 bool overrule
