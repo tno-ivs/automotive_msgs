@@ -14,9 +14,9 @@ uint8 type              # Type of the line
 # Definition of road segment types:
 uint8 TYPE_DASHED = 0
 uint8 TYPE_SOLID = 1
-uint8 TYPE_UNDECIDED = 2
-uint8 TYPE_ROAD_EDGE = 3
+uint8 TYPE_UNDECIDED = 2 # indicates that it detects a line, however it has been determined what the line type is
+uint8 TYPE_ROAD_EDGE = 3 
 # 4 = 
 # 5 = 
-uint8 TYPE_INVALID = 6
+uint8 TYPE_INVALID = 6 # line detection is not valid (ie no line available), and this measurement should be ignored
 #..
