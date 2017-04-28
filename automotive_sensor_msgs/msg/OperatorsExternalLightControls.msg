@@ -1,0 +1,9 @@
+std_msgs/Header header
+
+uint8 TURN_SIGNAL_OFF=0
+uint8 TURN_SIGNAL_LEFT_TURN_TO_BE_FLASHING=1
+uint8 TURN_SIGNAL_RIGHT_TURN_TO_BE_FLASHING=2
+uint8 TURN_SIGNAL_ERROR=14
+uint8 TURN_SIGNAL_NA=15
+
+uint8 turn_signal_switch
