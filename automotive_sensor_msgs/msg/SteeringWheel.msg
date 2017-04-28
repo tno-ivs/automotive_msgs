@@ -1,4 +1,4 @@
 Header header
 
-float32 position
-float32 velocity
+float32 position # [rad]
+float32 velocity # [rad/s]
