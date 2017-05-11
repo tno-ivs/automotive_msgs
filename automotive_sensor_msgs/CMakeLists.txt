@@ -14,6 +14,8 @@ add_message_files(
     WheelSpeeds.msg
     MassSlopeEstimation.msg
     OperatorsExternalLightControls.msg
+    EngineSpeed.msg
+    OEMADASStatus.msg
 )
 
 generate_messages(DEPENDENCIES std_msgs geometry_msgs)
