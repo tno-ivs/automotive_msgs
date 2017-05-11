@@ -7,5 +7,6 @@ float32 setpoint
 ---
 Header header
 
+float32 effort # Calculated effort by the controller
 bool brake_overrule
 bool throttle_overrule
