@@ -6,6 +6,9 @@ find_package(catkin REQUIRED COMPONENTS message_generation std_msgs geometry_msg
 add_message_files(
     DIRECTORY msg
     FILES
+    AdaptiveCruiseControlButton.msg
+    CruiseControlButton.msg
+    EmergencyButton.msg
     LineSegment.msg
     Lines.msg
     SteeringWheel.msg
