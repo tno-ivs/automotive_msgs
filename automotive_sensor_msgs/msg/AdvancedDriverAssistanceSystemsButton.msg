@@ -1,6 +1,6 @@
 std_msgs/Header header
 
-bool mode
+uint8 mode
 bool headway_mode
 bool on_off
 bool resume
