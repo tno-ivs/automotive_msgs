@@ -8,10 +8,15 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 # Generate messages in the 'msg' folder
-add_action_files(DIRECTORY msg action FILES 
+add_action_files(DIRECTORY action FILES 
     Longitudinal.action
     SteeringWheel.action
-    SteeringWheelRequest.msg
+)
+
+add_message_files(
+	DIRECTORY msg 
+	FILES 
+    LongitudinalRequest.msg
 )
 
 generate_messages(DEPENDENCIES std_msgs actionlib_msgs)

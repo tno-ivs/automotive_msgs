@@ -1,0 +1,5 @@
+uint8 SETPOINT_TYPE_ACCELERATION=0
+uint8 SETPOINT_TYPE_VELOCITY=1
+
+uint8 setpoint_type
+float32 setpoint
