@@ -1,26 +1,52 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(automotive_control_msgs)
 
-find_package(catkin REQUIRED COMPONENTS
-  message_generation
-  std_msgs
-  actionlib_msgs
+# Default to C99
+if(NOT CMAKE_C_STANDARD)
+  set(CMAKE_C_STANDARD 99)
+endif()
+
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+# find dependencies
+find_package(ament_cmake REQUIRED)
+find_package(builtin_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(action_msgs REQUIRED)
+
+set(action_files
+  "action/Longitudinal.action"
+  "action/SteeringWheel.action"
 )
 
-# Generate messages in the 'msg' folder
-add_action_files(DIRECTORY action FILES 
-    Longitudinal.action
-    SteeringWheel.action
+set(msg_files
+	"msg/LongitudinalRequest.msg"
 )
 
-add_message_files(
-	DIRECTORY msg 
-	FILES 
-    LongitudinalRequest.msg
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${action_files} ${msg_files}
+  DEPENDENCIES builtin_interfaces std_msgs action_msgs
 )
 
-generate_messages(DEPENDENCIES std_msgs actionlib_msgs)
+ament_export_dependencies(rosidl_default_runtime)
 
-catkin_package(
-    CATKIN_DEPENDS std_msgs actionlib_msgs message_runtime
-)
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  # the following line skips the linter which checks for copyrights
+  # uncomment the line when a copyright and license is not present in all source files
+  #set(ament_cmake_copyright_FOUND TRUE)
+  # the following line skips cpplint (only works in a git repo)
+  # uncomment the line when this package is not in a git repo
+  #set(ament_cmake_cpplint_FOUND TRUE)
+  ament_lint_auto_find_test_dependencies()
+endif()
+
+ament_package()
