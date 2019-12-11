@@ -13,11 +13,11 @@ add_action_files(DIRECTORY action FILES
     SteeringWheel.action
 )
 
-add_message_files(
-	DIRECTORY msg 
-	FILES 
-    LongitudinalRequest.msg
-)
+#add_message_files(
+#	DIRECTORY msg 
+#	FILES 
+#    LongitudinalRequest.msg
+#)
 
 generate_messages(DEPENDENCIES std_msgs actionlib_msgs)
 
