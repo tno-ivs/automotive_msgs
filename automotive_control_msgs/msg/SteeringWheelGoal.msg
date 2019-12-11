@@ -1,0 +1,4 @@
+uint8 SETPOINT_TYPE_POSITION=0
+uint8 SETPOINT_TYPE_TORQUE=1
+uint8 setpoint_type
+float32 setpoint

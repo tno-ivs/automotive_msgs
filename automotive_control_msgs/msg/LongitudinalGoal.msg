@@ -1,5 +1,3 @@
-std_msgs/Header header
-
 uint8 SETPOINT_TYPE_ACCELERATION=0
 uint8 SETPOINT_TYPE_VELOCITY=1
 

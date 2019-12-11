@@ -21,6 +21,8 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(action_msgs REQUIRED)
+find_package(actionlib_msgs REQUIRED)
+
 
 set(action_files
   "action/Longitudinal.action"
@@ -28,12 +30,18 @@ set(action_files
 )
 
 set(msg_files
-  "msg/LongitudinalRequest.msg"
+  "msg/LongitudinalGoal.msg"
+  "msg/LongitudinalFeedback.msg"
+  "msg/LongitudinalResult.msg"
+
+  "msg/SteeringWheelGoal.msg"
+  "msg/SteeringWheelFeedback.msg"
+  "msg/SteeringWheelResult.msg"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${action_files} ${msg_files}
-  DEPENDENCIES builtin_interfaces std_msgs action_msgs
+  DEPENDENCIES builtin_interfaces std_msgs action_msgs actionlib_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)
