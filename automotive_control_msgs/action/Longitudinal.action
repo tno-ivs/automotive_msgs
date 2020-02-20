@@ -5,7 +5,7 @@ uint8 SETPOINT_TYPE_ACCELERATION=2
 uint8 SETPOINT_TYPE_AUTOMATIC_EMERGENCY_BRAKING=3
 
 uint8 setpoint_type
-float32 setpoint
+float64 setpoint
 ---
 ---
 Header header
