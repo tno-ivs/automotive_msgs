@@ -1,4 +1,3 @@
-# !!WARNING!! the constants are different from the kinetic implementation 
 uint8 SETPOINT_TYPE_OFF=0
 uint8 SETPOINT_TYPE_POSITION=1
 uint8 SETPOINT_TYPE_TORQUE=2
