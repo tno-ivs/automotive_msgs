@@ -18,6 +18,8 @@ add_message_files(
     EngineSpeed.msg
     OEMADASStatus.msg
     Environment.msg
+    ArcticulationAngle.msg
+    TruckDimensions.msg
 )
 
 generate_messages(DEPENDENCIES std_msgs geometry_msgs)
