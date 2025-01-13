@@ -23,9 +23,3 @@ uint8 CONTROL_SETTING_ERROR=3
 uint8 control_setting
 uint8 setpoint_type
 float64 setpoint
----
----
-std_msgs/Header header
-
-bool brake_overrule
-bool throttle_overrule

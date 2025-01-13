@@ -5,9 +5,3 @@ uint8 SETPOINT_TYPE_POSITION_PARK_ASSIST=3
 
 uint8 setpoint_type
 float64 setpoint
----
----
-std_msgs/Header header
-
-float32 position
-bool overrule
