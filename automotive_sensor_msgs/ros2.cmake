@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16.3)
-project(automotive_control_msgs)
+project(automotive_sensor_msgs)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -19,47 +19,32 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(action_msgs REQUIRED)
-find_package(actionlib_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
-set(action_files
-  "action/Longitudinal.action"
-  "action/SteeringWheel.action"
-  "action/GearChange.action"
-)
-
-# NOTE: msgs are defined because:
-#       - ros1_bridge cannot bridge actions
-#       - Mathworks doesnt support actions
 set(msg_files
-  "msg/LongitudinalActionGoal.msg"
-  "msg/LongitudinalActionFeedback.msg"
-  "msg/LongitudinalActionResult.msg"
-  "msg/LongitudinalGoal.msg"
-  "msg/LongitudinalFeedback.msg"
-  "msg/LongitudinalResult.msg"
-
-  "msg/SteeringWheelActionGoal.msg"
-  "msg/SteeringWheelActionFeedback.msg"
-  "msg/SteeringWheelActionResult.msg"
-  "msg/SteeringWheelGoal.msg"
-  "msg/SteeringWheelFeedback.msg"
-  "msg/SteeringWheelResult.msg"
-
-  "msg/GearChangeActionGoal.msg"
-  "msg/GearChangeActionFeedback.msg"
-  "msg/GearChangeActionResult.msg"
-  "msg/GearChangeGoal.msg"
-  "msg/GearChangeFeedback.msg"
-  "msg/GearChangeResult.msg"
+  "msg/AdvancedDriverAssistanceSystemsButton.msg"
+  "msg/LineSegment.msg"
+  "msg/Lines.msg"
+  "msg/Steering.msg"
+  "msg/SteeringWheel.msg"
+  "msg/Pedals.msg"
+  "msg/Gear.msg"
+  "msg/WheelSpeeds.msg"
+  "msg/MassSlopeEstimation.msg"
+  "msg/OperatorsExternalLightControls.msg"
+  "msg/EngineSpeed.msg"
+  "msg/OEMADASStatus.msg"
+  "msg/Environment.msg"
+  "msg/ArticulationAngle.msg"
+  "msg/TractorDimensions.msg"
+  "msg/TrailerDimensions.msg"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  ${action_files}
   ${msg_files}
   DEPENDENCIES
   std_msgs
-  actionlib_msgs
+  geometry_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)

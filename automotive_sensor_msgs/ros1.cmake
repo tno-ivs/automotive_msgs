@@ -1,26 +1,40 @@
 cmake_minimum_required(VERSION 3.16.3)
-project(automotive_control_msgs)
+project(automotive_sensor_msgs)
 
 find_package(catkin REQUIRED COMPONENTS
-  message_generation
-  std_msgs
-  actionlib_msgs
+    message_generation
+    std_msgs
+    geometry_msgs
 )
 
-# Generate messages in the 'msg' folder
-add_action_files(DIRECTORY action FILES 
-  Longitudinal.action
-  SteeringWheel.action
-  GearChange.action
+add_message_files(
+    DIRECTORY msg
+    FILES
+    AdvancedDriverAssistanceSystemsButton.msg
+    LineSegment.msg
+    Lines.msg
+    Steering.msg
+    SteeringWheel.msg
+    Pedals.msg
+    Gear.msg
+    WheelSpeeds.msg
+    MassSlopeEstimation.msg
+    OperatorsExternalLightControls.msg
+    EngineSpeed.msg
+    OEMADASStatus.msg
+    Environment.msg
+    ArticulationAngle.msg
+    TractorDimensions.msg
+    TrailerDimensions.msg
 )
 
 generate_messages(DEPENDENCIES
-  std_msgs
-  actionlib_msgs
+    std_msgs
+    geometry_msgs
 )
 
 catkin_package(CATKIN_DEPENDS
-  std_msgs
-  actionlib_msgs
-  message_runtime
+    message_runtime
+    std_msgs
+    geometry_msgs
 )
