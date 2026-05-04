@@ -17,6 +17,7 @@ add_message_files(
     OperatorsExternalLightControls.msg
     EngineSpeed.msg
     OEMADASStatus.msg
+    Environment.msg
 )
 
 generate_messages(DEPENDENCIES std_msgs geometry_msgs)
