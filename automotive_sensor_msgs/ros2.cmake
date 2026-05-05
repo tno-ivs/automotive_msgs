@@ -34,7 +34,7 @@ set(msg_files
   "msg/OperatorsExternalLightControls.msg"
   "msg/EngineSpeed.msg"
   "msg/OEMADASStatus.msg"
-  "msg/Environment.msg"
+  "msg/EnvironmentStatus.msg"
   "msg/ArticulationAngle.msg"
   "msg/TractorDimensions.msg"
   "msg/TrailerDimensions.msg"

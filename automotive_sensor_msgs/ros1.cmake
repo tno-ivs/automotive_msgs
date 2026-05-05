@@ -22,7 +22,7 @@ add_message_files(
     OperatorsExternalLightControls.msg
     EngineSpeed.msg
     OEMADASStatus.msg
-    Environment.msg
+    EnvironmentStatus.msg
     ArticulationAngle.msg
     TractorDimensions.msg
     TrailerDimensions.msg
