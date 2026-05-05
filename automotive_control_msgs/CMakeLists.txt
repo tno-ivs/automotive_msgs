@@ -1,20 +1,11 @@
-cmake_minimum_required(VERSION 2.8.3)
-project(automotive_control_msgs)
+cmake_minimum_required(VERSION 3.16.3)
+project(automotive_sensor_msgs)
 
-find_package(catkin REQUIRED COMPONENTS
-  message_generation
-  std_msgs
-  actionlib_msgs
-)
-
-# Generate messages in the 'msg' folder
-add_action_files(DIRECTORY action FILES 
-    Longitudinal.action
-    SteeringWheel.action
-)
-
-generate_messages(DEPENDENCIES std_msgs actionlib_msgs)
-
-catkin_package(
-    CATKIN_DEPENDS std_msgs actionlib_msgs message_runtime
-)
+# try to find out which ros version is sourced
+if(DEFINED ENV{ROS_VERSION} AND "$ENV{ROS_VERSION}" STREQUAL "1")
+  include(ros1.cmake)
+elseif(DEFINED ENV{ROS_VERSION} AND "$ENV{ROS_VERSION}" STREQUAL "2")
+  include(ros2.cmake)
+else()
+  message(FATAL_ERROR "ROS build tool not found.")
+endif()
