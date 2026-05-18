@@ -4,4 +4,4 @@
 
 std_msgs/Header header     # provide the object's base_link as frame_id
 
-automotive_sensor_msgs/WheelSpeed[] wheels
+automotive_sensor_msgs/Wheel[] wheels
