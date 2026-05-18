@@ -18,6 +18,8 @@ add_message_files(
     Pedals.msg
     Gear.msg
     WheelSpeeds.msg
+    WheelSpeed.msg
+    WheelSpeedArray.msg
     MassSlopeEstimation.msg
     OperatorsExternalLightControls.msg
     EngineSpeed.msg

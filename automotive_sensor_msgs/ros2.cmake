@@ -30,6 +30,8 @@ set(msg_files
   "msg/Pedals.msg"
   "msg/Gear.msg"
   "msg/WheelSpeeds.msg"
+  "msg/WheelSpeed.msg"
+  "msg/WheelSpeedArray.msg"
   "msg/MassSlopeEstimation.msg"
   "msg/OperatorsExternalLightControls.msg"
   "msg/EngineSpeed.msg"
