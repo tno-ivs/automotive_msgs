@@ -20,6 +20,7 @@ add_message_files(
     WheelSpeeds.msg
     Wheel.msg
     Wheels.msg
+    Tyres.msg
     MassSlopeEstimation.msg
     OperatorsExternalLightControls.msg
     EngineSpeed.msg
