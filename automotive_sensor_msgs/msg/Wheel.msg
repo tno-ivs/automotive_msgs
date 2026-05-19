@@ -1,7 +1,7 @@
 # ===[Definition of rotational velocity units]===
 uint8 VELOCITY_UNIT_NONE=0          # default value: no units are set (your program should raise an error in this case)
 uint8 VELOCITY_UNIT_RAD_PER_SEC=1   # rad/s  (rotational/angular velocity)
-uint8 VELOCITY_UNIT_DEG_PER_SEC=1   # rad/s  (rotational/angular velocity)
+uint8 VELOCITY_UNIT_DEG_PER_SEC=2   # rad/s  (rotational/angular velocity)
 
 # ===[Definition of (ground) steer angle units]===
 uint8 STEER_ANGLE_UNIT_NONE=0       # default value: no units are set (your program should raise an error in this case)
